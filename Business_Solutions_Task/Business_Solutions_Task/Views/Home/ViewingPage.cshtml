@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Тест";
+}
+
+<div class="row" style="justify-content: center ">
+    <div class="col-2 pt-2">
+        <input type="date" id="date1" name="date1" class="form-control text-center" />
+    </div>
+
+    <div class="col-2 pt-2">
+        <input type="date" id="date2" name="date2" class="form-control text-center" />
+    </div>
+
+    <div class="col-2 pt-2 ">
+
+        @Html.DropDownList("PrividerId", null, "поставщик", htmlAttributes: new { @class = "form-control text-center" })
+
+    </div>
+
+    <div class="col-2 pt-2">
+        <button id="ButtonFilter" style="height: 38px;" class="btn-sm btn-primary">фильтр</button>
+    </div>
+
+</div>
+
+<div class="col-2 pt-2">
+    
+</div>
+
+<div class="table-responsive">
+    <table id="table" class="table table-hover table-bordered table-sm text-center ">
+        <thead class="thead-dark">
+            <tr>
+                <th class="align-middle">
+                    Название
+                </th>
+                <th class="align-middle">
+                    Количество
+                </th>
+                <th class="align-middle">
+                    Ед. Измерения
+                </th>
+                <th class="align-middle">
+                    Номер
+                </th>
+                <th class="align-middle">
+                    Дата
+                </th>
+                <th class="align-middle">
+                    Поставщик
+                </th>
+            </tr>
+        </thead>
+        <tbody id="TBody">
+            <tr class="OrderList" id="OrderList">
+                <td class="align-middle text-center">
+                    <button class="RemoveOrder" value="$OrderItemId">X</button><input value="$Name" class="Name" style="max-width:80%" />
+                </td>
+                <td class="align-middle text-center">
+                    <input value="$Quantity" class="Quantity" />
+                </td>
+                <td class="align-middle text-center">
+                    <input value="$Unit" class="Unit" />
+                </td>
+                <td class="align-middle text-center">
+                    <input hidden value="$OrderId" class="OrderId" />
+                    <input value="$Namber" class="Namber" />
+                </td>
+                <td class="align-middle text-center">
+                    <input value="$Date" class="Date" />
+                </td>
+                <td class="align-middle text-left">
+                    <span class="ProviderName">$ProvName</span>  
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="~/js/ViewingPage.js"></script>

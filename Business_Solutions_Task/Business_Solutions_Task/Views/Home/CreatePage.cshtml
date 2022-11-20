@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewData["Title"] = "Тест";
+}
+
+<div class="container" style="justify-content: center ">
+    <div class="col">
+
+        <span>Добавить заказ</span>
+        <div class="col-2 pl-0 pr-3 pb-3 pt-2">
+
+            <input id="Number" placeholder="номер заказа" class="form-control text-center" />
+
+        </div>
+
+        <div class="col-2 pl-0 pr-3 pb-3 pt-2">
+
+            <input id="Date" type="date" placeholder="дата заказа" class="form-control text-center" />
+
+        </div>
+
+        <div class="col-2 pl-0 pr-3 pb-3 pt-2">
+
+            @Html.DropDownList("PrividerId", null, "поставщик", htmlAttributes: new { @class = "form-control text-center" })
+
+        </div>
+
+        <div class="pl-0 pr-3 pb-3 pt-2">
+
+            <button id="ButtonAddOrder" style="margin-right: 5px; height: 38px;" class="btn-sm btn-primary">создать заказ</button>
+
+        </div>
+
+
+        <span>Добавить элемент заказа</span>
+        <div class="col-2 pl-0 pr-3 pb-3 pt-2">
+
+            <input id="Name" placeholder="наименование" class="form-control text-center" />
+
+        </div>
+
+        <div class="col-2 pl-0 pr-3 pb-3 pt-2">
+
+            <input id="Quantity" placeholder="количество" class="form-control text-center" />
+
+        </div>
+
+        <div class="col-2 pl-0 pr-3 pb-3 pt-2">
+
+            <input id="Unit" placeholder="ед. измерения" class="form-control text-center" />
+
+        </div>
+
+
+        <div class="col-2 pl-0 pr-3 pb-3 pt-2">
+
+            @Html.DropDownList("OrderId", null, "заказ", htmlAttributes: new { @class = "form-control text-center" })
+
+        </div>
+
+        <div class="pl-0 pr-3 pb-3 pt-2">
+
+            <button id="ButtonAddOrderItem" style="margin-right: 5px; height: 38px;" class="btn-sm btn-primary">создать элемент заказа</button>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="~/js/CreatePage.js"></script>
